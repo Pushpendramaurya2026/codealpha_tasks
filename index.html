@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Calculator </title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="calculator">
-        <input type="text" id="inputBox" placeholder="0" />
-        <div>
-          <button class="button operator">AC</button>
-          <button class="button operator">DEL</button>
-          <button class="button operator">%</button>
-          <button class="button operator">/</button>
-        </div>
-        <div>
-          <button class="button">7</button>
-          <button class="button">8</button>
-          <button class="button">9</button>
-          <button class="button operator">*</button>
-        </div>
-        <div>
-          <button class="button">4</button>
-          <button class="button">5</button>
-          <button class="button">6</button>
-          <button class="button operator">-</button>
-        </div>
-        <div>
-          <button class="button">1</button>
-          <button class="button">2</button>
-          <button class="button">3</button>
-          <button class="button operator">+</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="gallery-container">
+        <h1>Visual Portfolio</h1>
+        
+        <div class="filter-wrapper">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="architecture">Architecture</button>
+            <button class="filter-btn" data-filter="tech">Tech</button>
         </div>
 
-        <div>
-          <button class="button">00</button>
-          <button class="button">0</button>
-          <button class="button">.</button>
-          <button class="button equalBtn">=</button>
+        <div class="image-grid" id="image-grid">
+            <div class="gallery-item" data-category="nature">
+                <img src="https://picsum.photos/id/10/600/400" alt="Nature 1">
+            </div>
+            <div class="gallery-item" data-category="architecture">
+                <img src="https://picsum.photos/id/101/600/400" alt="Architecture 1">
+            </div>
+            <div class="gallery-item" data-category="tech">
+                <img src="https://picsum.photos/id/160/600/400" alt="Tech 1">
+            </div>
+            <div class="gallery-item" data-category="nature">
+                <img src="https://picsum.photos/id/28/600/400" alt="Nature 2">
+            </div>
+            <div class="gallery-item" data-category="architecture">
+                <img src="https://picsum.photos/id/122/600/400" alt="Architecture 2">
+            </div>
+            <div class="gallery-item" data-category="tech">
+                <img src="https://picsum.photos/id/180/600/400" alt="Tech 2">
+            </div>
         </div>
-      </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn">&times;</span>
+        <button class="nav-btn prev" id="prevBtn">&#10094;</button>
+        <div class="lightbox-content">
+            <img src="" id="lightbox-img">
+        </div>
+        <button class="nav-btn next" id="nextBtn">&#10095;</button>
     </div>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
